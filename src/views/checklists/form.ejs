@@ -1,0 +1,26 @@
+<%- include('../layouts/header.ejs',{title: "Cadastro de Tarefa"}) %> <%-
+include('../layouts/menu.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title size-4">Nova tarefa</h1>
+
+    <form method="<% method %>" action="<% url %>">
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="checklist[name]"
+            placeholder="Tarefa"
+            value="<% checklist.name %>" />
+        </div>
+      </div>
+
+      <button type="submit" class="button is-success">Salvar</button>
+      <a href="/checklists" class="button">Cancelar</a>
+    </form>
+  </div>
+</section>
+<%- include('../layouts/footer.ejs') %>
